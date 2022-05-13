@@ -5,7 +5,6 @@ I'm a programming student from in Lahore, Pakistan.
 # Education
 - I am currently pursuing my Computer Sciences bachelors degree from <b>FAST NUCES</b> Lahore.
 
-<br/>
 # What Do I Do?
 
 - 🔭 I’m currently kick-starting my web development journey from [The Odin Project](https://www.theodinproject.com/).
@@ -16,7 +15,7 @@ I'm a programming student from in Lahore, Pakistan.
 
 - 📫 Contact me at **fahadwaseem8@gmail.com**
 
-  # Languages and Tools
+# Languages and Tools
 ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
 ![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)
 ![Firebase](https://img.shields.io/badge/firebase%20-%23039BE5.svg?&style=flat-square&logo=firebase)
