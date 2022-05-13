@@ -2,11 +2,11 @@
 
 I'm a programming student from in Lahore, Pakistan.
 
-<h3 align="left" >Education</h3>
+# Education
 - I am currently pursuing my Computer Sciences bachelors degree from <b>FAST NUCES</b> Lahore.
 
 <br/>
-<h3 align="left">What Do I Do?</h3>
+# What Do I Do?
 
 - 🔭 I’m currently kick-starting my web development journey from [The Odin Project](https://www.theodinproject.com/).
 
@@ -16,7 +16,7 @@ I'm a programming student from in Lahore, Pakistan.
 
 - 📫 Contact me at **fahadwaseem8@gmail.com**
 
-  # :man_technologist: Languages and Tools
+  # Languages and Tools
 ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
 ![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)
 ![Firebase](https://img.shields.io/badge/firebase%20-%23039BE5.svg?&style=flat-square&logo=firebase)
@@ -35,7 +35,7 @@ I'm a programming student from in Lahore, Pakistan.
 
 
 
-<h3 align="left">My Activity:</h3>
+# My Activity
 <p align = "center">
   <img src = "https://github-readme-stats.vercel.app/api?username=fahadw9&show_icons=true&theme=bear" width = 400>
   <img src = "https://github-readme-streak-stats.herokuapp.com/?user=fahadw9&theme=dark&hide_border=true" width = 400>
