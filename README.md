@@ -6,9 +6,6 @@ I'm a programming student from in Lahore, Pakistan.
 - I am currently pursuing my Computer Sciences bachelors degree from <b>FAST NUCES</b> Lahore.
 
 # What Do I Do?
-
-- 🔭 I’m currently kick-starting my web development journey from [The Odin Project](https://www.theodinproject.com/).
-
 - 🌱 I’m currently learning native web and mobile application development.
 
 - 👨‍💻 All of my projects are available on [GitHub](https://github.com/Fahadw9)
