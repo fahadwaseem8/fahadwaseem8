@@ -26,7 +26,9 @@ function toggleTheme() {
 
 function toggleMobileMenu() {
     const mobileNav = document.querySelector('.mobile-nav');
-    mobileNav.classList.toggle('open');
+    if (mobileNav) {
+        mobileNav.classList.toggle('open');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -46,10 +48,17 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
+                const navbarHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset; 
                 window.scrollTo({
-                    top: target.offsetTop - 70,
+                    top: targetPosition - navbarHeight - 20,
                     behavior: 'smooth'
                 });
+            }
+            
+            const mobileNav = document.querySelector('.mobile-nav');
+            if (mobileNav && mobileNav.classList.contains('open')) {
+                mobileNav.classList.remove('open');
             }
         });
     });
