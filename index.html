@@ -1,107 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fahad's Portfolio</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Fahad's Portfolio</h1>
+        <div class="navbar">
+            <h1>Fahad's Portfolio</h1>
+            <div class="nav-links">
+                <a href="#profile" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i id="theme-icon" class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
 
     <div class="container mt-5">
 
-        <section id="profile" class="profile text-center mb-5">
-            <h2>About Me</h2>
-            <p class="lead">Hello! I'm Fahad, a dedicated web developer passionate about crafting seamless user experiences. With a strong foundation in frontend and backend technologies, I specialize in building responsive and intuitive web applications.</p>
-            <p>My journey in web development has led me to create diverse projects that showcase my skills and creativity. From EduVerse, a comprehensive web learning platform integrating a code editor, to ScoutMD, streamlining the process of finding the right doctor, each project reflects my commitment to innovation and usability.</p>
-            <p>On the mobile front, I've ventured into Flutter for apps like TrainEats, which simplifies meal tracking, and embarked on my iOS Swift journey with FlavorFusion, a sleek app for exploring culinary delights.</p>
-            <p>My passion extends to data science and AI, where I've tackled challenges like detecting fake job listings and exploring cricket player statistics using machine learning techniques.</p>
-            <p>With each project, I aim not only to solve problems but also to create engaging digital experiences that make a positive impact. Welcome to my portfolio, where innovation meets functionality!</p>
+        <section id="profile" class="profile text-center mb-5 animate-on-scroll">
+            <h2 class="mb-4">About Me</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="assets/Profile Picture.jpeg" alt="Fahad's Profile" class="img-fluid mb-3">
+                    <div class="social-links">
+                        <a href="mailto:fahadwaseem8@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/fahad-waseem-b1786323a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Fahadw9/" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-8 text-left">
+                    <p class="lead">Hello! I'm Fahad, a dedicated web developer passionate about crafting seamless user experiences. With a strong foundation in frontend and backend technologies, I specialize in building responsive and intuitive web applications.</p>
+                    <p>My journey in web development has led me to create diverse projects that showcase my skills and creativity. From EduVerse, a comprehensive web learning platform integrating a code editor, to ScoutMD, streamlining the process of finding the right doctor, each project reflects my commitment to innovation and usability.</p>
+                    <p>On the mobile front, I've ventured into Flutter for apps like TrainEats, which simplifies meal tracking, and embarked on my iOS Swift journey with FlavorFusion, a sleek app for exploring culinary delights.</p>
+                    <p>My passion extends to data science and AI, where I've tackled challenges like detecting fake job listings and exploring cricket player statistics using machine learning techniques.</p>
+                </div>
+            </div>
         </section>
         
-
-        <section id="projects" class="projects mb-5">
+        <section id="projects" class="projects mb-5 animate-on-scroll">
             <h2 class="text-center mb-4">Projects</h2>
             <div class="tab d-flex justify-content-center mb-4">
-                <button class="btn btn-outline-primary mr-2" onclick="openTab(event, 'WebApps')">Web Apps</button>
-                <button class="btn btn-outline-primary mr-2" onclick="openTab(event, 'MobileApps')">Mobile Apps</button>
-                <button class="btn btn-outline-primary" onclick="openTab(event, 'AIMLApps')">AI/ML Apps</button>
+                <button class="btn btn-outline-primary mr-2 tab-btn" onclick="openTab(event, 'WebApps')">Web Apps</button>
+                <button class="btn btn-outline-primary mr-2 tab-btn" onclick="openTab(event, 'MobileApps')">Mobile Apps</button>
+                <button class="btn btn-outline-primary tab-btn" onclick="openTab(event, 'AIMLApps')">AI/ML Apps</button>
             </div>
 
             <div id="WebApps" class="tabcontent">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h3>EduVerse</h3>
-                        <img src="assets/EduVerse.png" alt="EduVerse" class="img-fluid mb-3">
-                        <p>EduVerse is a comprehensive web learning platform developed as my Final Year Project. Built using React and Firebase, it features an integrated code editor powered by acejs, forums, video lectures, PDF notes, and quizzes. EduVerse is designed to enhance the learning experience by providing a variety of resources and interactive elements to help students check their knowledge and progress effectively.</p>
-                        <a href="https://fyp-eduverse.web.app/" target="_blank" class="btn btn-primary">Visit EduVerse</a>
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="assets/EduVerse.png" alt="EduVerse" class="img-fluid">
+                            </div>
+                            <div class="project-content">
+                                <h3>EduVerse</h3>
+                                <p>EduVerse is a comprehensive web learning platform developed as my Final Year Project. Built using React and Firebase, it features an integrated code editor powered by acejs, forums, video lectures, PDF notes, and quizzes. EduVerse is designed to enhance the learning experience by providing a variety of resources and interactive elements to help students check their knowledge and progress effectively.</p>
+                                <a href="https://fyp-eduverse.web.app/" target="_blank" class="btn btn-primary">Visit EduVerse</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <h3>ScoutMD - Doctor Finder Web App</h3>
-                        <img src="assets/ScoutMD.png" alt="ScoutMD" class="img-fluid mb-3">
-                        <p>ScoutMD is a web application designed to streamline the process of finding the right doctor in a hospital. The app allows users to input details about their ailments and the affected body part, guiding them to the appropriate doctor's office. The primary goal is to automate and expedite the process of finding a doctor based on a patient's specific ailment and affected body part, reducing waiting times, easing hospital traffic, and enhancing accessibility. The frontend is built using ReactJS, with Node.js and Express handling the backend, and MongoDB Atlas as the database.</p>
-                        <a href="https://github.com/Abdoooluh/ScoutMD-FE" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="assets/ScoutMD.png" alt="ScoutMD" class="img-fluid">
+                            </div>
+                            <div class="project-content">
+                                <h3>ScoutMD - Doctor Finder</h3>
+                                <p>ScoutMD is a web application designed to streamline the process of finding the right doctor in a hospital. The app allows users to input details about their ailments and the affected body part, guiding them to the appropriate doctor's office. Built with ReactJS frontend, Node.js and Express backend, and MongoDB Atlas database.</p>
+                                <a href="https://github.com/Abdoooluh/ScoutMD-FE" target="_blank" class="btn btn-primary">View on GitHub</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div id="MobileApps" class="tabcontent">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h3>TrainEats</h3>
-                        <img src="assets/TrainEats.png" alt="TrainEats" class="img-fluid mb-3">
-                        <p>TrainEats is a mobile application developed as a freelance project on Fiverr. The app allows users to scan meals using their camera to automatically add them to their consumed meals list. It also tracks calories, reminds users to drink water, and records the calories burnt to help users achieve their desired weight. Built using Flutter for the frontend and Firebase for the backend, TrainEats aims to make healthy living and weight management easier and more efficient.</p>
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="assets/TrainEats.png" alt="TrainEats" class="img-fluid">
+                            </div>
+                            <div class="project-content">
+                                <h3>TrainEats</h3>
+                                <p>TrainEats is a mobile application developed as a freelance project on Fiverr. The app allows users to scan meals using their camera to automatically add them to their consumed meals list. It also tracks calories, reminds users to drink water, and records the calories burnt to help users achieve their desired weight. Built using Flutter for the frontend and Firebase for the backend.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <h3>FlavorFusion</h3>
-                        <img src="assets/FlavorFusion.png" alt="FlavorFusion" class="img-fluid mb-3">
-                        <p>Embark on a culinary journey with FlavorFusion, my latest iOS app crafted entirely in SwiftUI. Designed around the MVVM architecture, FlavorFusion leverages TheMealDB API to offer a rich selection of meal recommendations. From delectable appetizers to satisfying main courses and indulgent desserts, FlavorFusion is your go-to companion for exploring diverse recipes. Its intuitive interface and seamless functionality showcase the power of SwiftUI in delivering a modern and immersive user experience.</p>
-                        <a href="https://github.com/Fahadw9/FlavourFusion" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="assets/FlavorFusion.png" alt="FlavorFusion" class="img-fluid">
+                            </div>
+                            <div class="project-content">
+                                <h3>FlavorFusion</h3>
+                                <p>Embark on a culinary journey with FlavorFusion, my latest iOS app crafted entirely in SwiftUI. Designed around the MVVM architecture, FlavorFusion leverages TheMealDB API to offer a rich selection of meal recommendations. Its intuitive interface and seamless functionality showcase the power of SwiftUI.</p>
+                                <a href="https://github.com/Fahadw9/FlavourFusion" target="_blank" class="btn btn-primary">View on GitHub</a>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
 
             <div id="AIMLApps" class="tabcontent">
                 <div class="row">
-                    <div class="col-md-6">
-                        <h3>Fake Job Listing Detection</h3>
-                        <img src="assets/Fake Job Listing Detection.png" alt="Fake Job Listing Detection" class="img-fluid mb-3">
-                        <p>Explore my AI project focused on detecting fake job listings using natural language processing (NLP) techniques with PySpark's MLlib. Leveraging a dataset of 18,000 job descriptions, including 800 labeled as fake, the project aims to automatically identify suspicious postings.</p>
-                        <p>By employing advanced text processing and machine learning algorithms, I developed an NLP model to accurately flag fraudulent job ads for further review. This project showcases the application of AI in enhancing job marketplace integrity and reliability.</p>
-                        <a href="https://github.com/Fahadw9/NLP-in-Pyspark/blob/main/NLP_Pyspark.ipynb" target="_blank" class="btn btn-primary">View on GitHub</a>
-
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="assets/Fake Job Listing Detection.png" alt="Fake Job Listing Detection" class="img-fluid">
+                            </div>
+                            <div class="project-content">
+                                <h3>Fake Job Listing Detection</h3>
+                                <p>Explore my AI project focused on detecting fake job listings using NLP techniques with PySpark's MLlib. Leveraging a dataset of 18,000 job descriptions, including 800 labeled as fake, the project aims to automatically identify suspicious postings using advanced text processing and machine learning algorithms.</p>
+                                <a href="https://github.com/Fahadw9/NLP-in-Pyspark/blob/main/NLP_Pyspark.ipynb" target="_blank" class="btn btn-primary">View on GitHub</a>
+                            </div>
+                        </div>
                     </div>                    
-                    <div class="col-md-6">
-                        <h3>Cricket Score Predictor</h3>
-                        <img src="assets/Cricket Score Predictor.jpg" alt="Cricket Analysis" class="img-fluid mb-3">
-                        <p>Delve into my data science project where I explore cricket player statistics using a comprehensive approach. The journey begins with meticulous data wrangling, employing various preprocessing techniques to refine a complex dataset with 154 columns into a focused subset.</p>
-                        <p>An in-depth exploratory data analysis uncovers patterns in batting styles, national distributions, and performance metrics, offering valuable insights into the cricketing landscape. Using TensorFlow and Keras, I crafted a neural network model to predict player runs based on key metrics.</p>
-                        <p>The model underwent rigorous training and evaluation, demonstrating its effectiveness in capturing intricate dataset relationships. This project amalgamates data wrangling, exploratory analysis, and machine learning to unveil multifaceted dimensions of cricket statistics, providing holistic understanding and predictive insights.</p>
-                        <a href="https://github.com/Fahadw9/data-science-project/blob/main/Cricket_Analysis.ipynb" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-img-container">
+                                <img src="assets/Cricket Score Predictor.jpg" alt="Cricket Analysis" class="img-fluid">
+                            </div>
+                            <div class="project-content">
+                                <h3>Cricket Score Predictor</h3>
+                                <p>Delve into my data science project where I explore cricket player statistics using a comprehensive approach. Using TensorFlow and Keras, I crafted a neural network model to predict player runs based on key metrics. The project combines data wrangling, exploratory analysis, and machine learning to provide holistic understanding.</p>
+                                <a href="https://github.com/Fahadw9/data-science-project/blob/main/Cricket_Analysis.ipynb" target="_blank" class="btn btn-primary">View on GitHub</a>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact text-center">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:fahadwaseem8@gmail.com">fahadwaseem8@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/fahad-waseem-b1786323a/" target="_blank">linkedin.com/in/fahad-waseem-b1786323a/</a></p>
-            <p>GitHub: <a href="https://github.com/Fahadw9/" target="_blank">github.com/Fahadw9/</a></p>
-
+        <section id="contact" class="contact text-center mb-5 animate-on-scroll">
+            <h2 class="mb-4">Get In Touch</h2>
+            <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <i class="fas fa-envelope mb-3" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h5>Email</h5>
+                    <p><a href="mailto:fahadwaseem8@gmail.com">fahadwaseem8@gmail.com</a></p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fab fa-linkedin mb-3" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h5>LinkedIn</h5>
+                    <p><a href="https://www.linkedin.com/in/fahad-waseem-b1786323a/" target="_blank">Fahad Waseem</a></p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fab fa-github mb-3" style="font-size: 2rem; color: var(--primary-color);"></i>
+                    <h5>GitHub</h5>
+                    <p><a href="https://github.com/Fahadw9/" target="_blank">Fahadw9</a></p>
+                </div>
+            </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2024 Fahad. All rights reserved.</p>
+        <p>&copy; 2025 Fahad Waseem. All rights reserved.</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
